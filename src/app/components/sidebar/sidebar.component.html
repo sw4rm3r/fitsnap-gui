@@ -1,0 +1,72 @@
+<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 sm:block hidden" aria-label="Sidebar">
+  <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+    <ul class="space-y-2 font-medium">
+      <li>
+        <img src="fitsnap-logo.png">
+      </li>
+      <li>
+        <p class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon name="home"></ion-icon>
+          <span class="ms-3">Home</span>
+        </p>
+      </li>
+      <li>
+        <p class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon name="chatbox"></ion-icon>
+          <span class="flex-1 ms-3 whitespace-nowrap">Messaggi</span>
+          <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+        </p>
+      </li>
+      <li>
+        <p class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon name="search"></ion-icon>
+          <span class="flex-1 ms-3 whitespace-nowrap">Cerca utenti</span>
+        </p>
+      </li>
+      <li>
+        <p class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon name="person"></ion-icon>
+          <span class="flex-1 ms-3 whitespace-nowrap">Profilo</span>
+        </p>
+      </li>
+      <li>
+        <p class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon name="key"></ion-icon>
+          <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+        </p>
+      </li>
+      <li>
+        <p class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon name="log-in"></ion-icon>
+          <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
+        </p>
+      </li>
+      <li>
+        <p (click)="_toggleDarkMode()" class="flex items-center p-2 cursor-pointer text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <ion-icon [name]="darkMode ? 'sunny' : 'moon'"></ion-icon>
+          <span class="flex-1 ms-3 whitespace-nowrap">{{ darkMode ? 'Light mode' : 'Dark mode' }}</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+<!-- Mobile navbar -->
+<div class="fixed top-0 left-0 right-0 z-50 flex justify-around bg-gray-50 dark:bg-gray-800 p-4 sm:hidden" style="height: 75px">
+  <img src="fitsnap-logo.png" width="150px">
+</div>
+
+<div class="sm:ml-64">
+  <ng-content></ng-content>
+</div>
+
+<!-- Mobile toolbar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex justify-around bg-gray-50 dark:bg-gray-800 p-6 sm:hidden">
+  <ion-icon name="home" class="text-gray-900 dark:text-white"></ion-icon>
+  <ion-icon name="chatbox" class="text-gray-900 dark:text-white"></ion-icon>
+  <ion-icon name="search" class="text-gray-900 dark:text-white"></ion-icon>
+  <ion-icon name="person" class="text-gray-900 dark:text-white"></ion-icon>
+  <ion-icon name="key" class="text-gray-900 dark:text-white"></ion-icon>
+  <ion-icon name="log-in" class="text-gray-900 dark:text-white"></ion-icon>
+  <ion-icon (click)="_toggleDarkMode()" [name]="darkMode ? 'sunny' : 'moon'" class="text-gray-900 dark:text-white"></ion-icon>
+</div>

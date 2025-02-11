@@ -1,0 +1,11 @@
+
+.normal-height {
+  height: 84.1vh;
+}
+
+@media (min-width: 640px) {
+  .normal-height {
+    height: 100vh;
+  }
+}
+
