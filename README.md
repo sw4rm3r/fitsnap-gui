@@ -7,6 +7,7 @@ This information and photos are then saved to the user's profile, who can decide
 The app thus has a strong social component but is based on fitness.
 
 <img src="public/fitsnap1-portrait.png" width="300" />
+<img src="public/fitsnap2.png" width="680" />
 
 ## Features
 
