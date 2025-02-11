@@ -1,10 +1,12 @@
 # Fitsnap
 
-Fitsnap is an app that allows users to photograph food or scan barcodes of grocery products. 
-By photographing the food, an AI analyzes it and estimates the calories. 
-Similarly, by scanning the barcode, a search is performed using the OpenFoodFacts API to get the exact calories. 
+Fitsnap is an app that allows users to photograph food or scan barcodes of grocery products.
+By photographing the food, an AI analyzes it and estimates the calories.
+Similarly, by scanning the barcode, a search is performed using the OpenFoodFacts API to get the exact calories.
 This information and photos are then saved to the user's profile, who can decide whether to share them with everyone in an social-style feed.
 The app thus has a strong social component but is based on fitness.
+
+<img src="public/fitsnap1-portrait.png" width="300" />
 
 ## Features
 
