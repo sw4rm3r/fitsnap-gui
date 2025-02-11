@@ -1,6 +1,17 @@
-# FitsnapPwa
+# Fitsnap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Fitsnap is an app that allows users to photograph food or scan barcodes of grocery products. 
+By photographing the food, an AI analyzes it and estimates the calories. 
+Similarly, by scanning the barcode, a search is performed using the OpenFoodFacts API to get the exact calories. 
+This information and photos are then saved to the user's profile, who can decide whether to share them with everyone in an social-style feed.
+The app thus has a strong social component but is based on fitness.
+
+## Features
+
+- **Food Photography**: Take photos of your food and get an AI-based calorie estimate.
+- **Barcode Scanning**: Scan barcodes of grocery products to get exact calorie information from OpenFoodFacts.
+- **User Profiles**: Save your food photos and calorie information to your profile.
+- **Social Sharing**: Share your food photos and calorie information with others in a social feed.
 
 ## Development server
 
