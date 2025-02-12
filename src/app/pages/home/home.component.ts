@@ -3,13 +3,16 @@ import {Post} from '../../interfaces/post';
 import {PostComponent} from '../../components/post/post.component';
 import {StoryComponent} from '../../components/story/story.component';
 import {IonIcon} from '@ionic/angular/standalone';
+import {WebcamModule} from 'ngx-webcam';
+import {WebcamService} from '../../services/webcam.service';
 
 @Component({
   selector: 'app-home',
   imports: [
     PostComponent,
     StoryComponent,
-    IonIcon
+    IonIcon,
+    WebcamModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -94,8 +97,11 @@ export class HomeComponent {
       likes: 20
     }
   ];
-  constructor() { }
+  constructor(private webcamService: WebcamService) { }
 
   ngOnInit() {}
 
+  openCamera() {
+    this.webcamService._toggleWebcam();
+  }
 }

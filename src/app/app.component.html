@@ -1,3 +1,25 @@
+<div class="webcam-container" *ngIf="webcamService.showWebcam">
+  @if (webcamService.chat) {
+    <div class="chat-container">
+      <div class="chat">
+        <div class="chat-message">
+          <span>{{webcamService.chat}}</span>
+        </div>
+      </div>
+    </div>
+  }
+  <div class="icons-container">
+    <ion-icon class="close-icon" (click)="webcamService._toggleWebcam()" name="close">
+    </ion-icon>
+    <ion-icon class="camera-icon" name="camera" (click)="manualPhoto = true; webcamTrigger.next()">
+    </ion-icon>
+    @if(webcamService.barcode){
+      <span style="font-size: 20px">Codice trovato: <b>{{webcamService.barcode}}</b></span>
+    }
+  </div>
+  <webcam [trigger]="webcamTrigger.asObservable()" (imageCapture)="webcamService._imageCapture($event, manualPhoto)">
+  </webcam>
+</div>
 <div [class]="darkMode">
   <app-sidebar (toggleDarkMode)="toggleDarkMode()">
     <div class="top-margin">

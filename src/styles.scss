@@ -1,2 +1,55 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+.webcam-container {
+  .chat-container {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    place-content: center;
+    z-index: 600;
+    width: 100%;
+    top: 0;
+    font-size: 7rem;
+    background: #000000c9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    .chat {
+      font-size: 18px;
+    }
+  }
+  .icons-container {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    place-content: center;
+    z-index: 600;
+    width: 100%;
+    bottom: 0;
+    font-size: 7rem;
+    background: #000000c9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  position: absolute;
+  z-index: 500;
+  height: 100%;
+  width: 100%;
+  webcam {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    video {
+      height: 100%;
+      width: 100%;
+    }
+    background: #000000c9;
+  }
+}
+
