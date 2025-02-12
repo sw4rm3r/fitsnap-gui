@@ -7,7 +7,7 @@ export class LocalAiService {
   }
 
 _generate(body: { model: string, prompt: string, images: string[] }) {
-    return this.httpClient.post('http://ollama-local.ddns.net:11434/api/generate', body, {
+    return this.httpClient.post('https://934f-213-45-167-54.ngrok-free.app/api/generate', body, {
       headers: { "Accept": "application/x-ndjson" },
       responseType: 'text'
     });
